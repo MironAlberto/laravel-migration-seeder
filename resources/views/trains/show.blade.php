@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('page-title', '$train->company')
+@section('page-title', $train->company)
 
 @section('main-content')
     <div class="d-flex justify-content-end pt-3 pe-3">
