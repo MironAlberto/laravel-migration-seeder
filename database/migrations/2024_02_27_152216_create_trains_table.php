@@ -19,9 +19,9 @@ return new class extends Migration
             $table->dateTime('departure_time', $precision = 0);
             $table->dateTime('arrival_time', $precision = 0);
             $table->string('train_code', 16);
-            $table->tinyInteger('train_carriages', 24)->unsigned();
+            $table->tinyInteger('train_carriages')->unsigned();
             $table->boolean('in_time')->nullable();
-            $table->boolean('deletated');
+            $table->boolean('deleted');
             $table->timestamps();
         });
     }

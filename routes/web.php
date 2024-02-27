@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+// Controllers
+use App\Http\Controllers\Guest\TrainsController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,14 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    
-    return view('trains', [
-    ]);
-});
-
-Route::get('/chi-siamo', function () {
-    return view('subpages.about');
-});
+Route::get('/', [TrainsController::class, 'index'])->name('trains');
+Route::get('/{id}', [TrainsController::class, 'show'])->name('show');
 
 // Route::get(PERCORSO CON CUI ARRIVARE ALLA PAGINA, FUNZIONE DI CALLBACK CHE MI CREA LA RISPOSTA DA DARE ALL UTENTE)

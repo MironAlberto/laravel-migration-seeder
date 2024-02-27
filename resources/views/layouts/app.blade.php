@@ -14,7 +14,7 @@
 
         @yield('head-imports')
     </head>
-    <body>
+    <body class="bg-gray">
 
         @include('partials.header')
 
